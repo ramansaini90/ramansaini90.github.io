@@ -1,49 +1,383 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+
+import ramanProfile from '../assets/headshot-raman.jpg';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>Hey there, I'm Raman!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="hero-wrapper">
+      <section class="hero">
+        <div class="hero-left">
+          <div class="badge">✨ Data-Driven Strategist</div>
+
+          <h1 class="title">Hey there, I'm Raman.</h1>
+
+          <h2 class="subtitle">
+            I turn complex data into<br />
+            actionable <span class="highlight">insights</span>.
+          </h2>
+
+          <p class="copy">
+            Helping brands make smarter decisions through rigorous research, statistical
+            analysis, and strategic consulting.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">100+</div>
+              <div class="stat-label">Analytics Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">10+</div>
+              <div class="stat-label">Years Exp.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="photo-card">
+            <Image src={ramanProfile} alt="Raman Saini - Data Strategist" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="expertise" class="expertise-section">
+      <div class="expertise-container">
+        <div class="expertise-header">
+          <h2 class="expertise-title">
+            What I bring to the <span class="highlight">table</span>
+          </h2>
+          <p class="expertise-subtitle">
+            I partner closely with clients to interpret research findings and integrate them into the decision-making process with precision and clarity.
+          </p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon mint">📈</div>
+            <h3 class="service-title">Product Optimization</h3>
+            <p class="service-description">
+              Driving product strategies using conjoint, choice, adaptive CBC methods.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon coral">🎯</div>
+            <h3 class="service-title">Key Driver Analysis</h3>
+            <p class="service-description">
+              Identifying derived key drivers of customer preferences via regression analysis.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon yellow">🔍</div>
+            <h3 class="service-title">Pricing Research</h3>
+            <p class="service-description">
+              Maximizing profitability using Van-Westendorp, Gabor Granger, and Conjoint models.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon blue">👥</div>
+            <h3 class="service-title">Segmentation</h3>
+            <p class="service-description">
+              Creating effective segmentation solutions using variety of clustering algorithms.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon lavender">💬</div>
+            <h3 class="service-title">Message Testing</h3>
+            <p class="service-description">
+              Evaluating marketing messages via MaxDiff to enhance customer engagement.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon coral">📊</div>
+            <h3 class="service-title">Brand Health Tracking</h3>
+            <p class="service-description">
+              Monitoring brand metrics and positioning through CSAT and NPS modeling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
 </html>
+
+<style>
+  /* RESET PAGE WIDTH */
+  main.hero-wrapper {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    padding: 4rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 3rem;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #fff;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    margin-bottom: 1.4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  }
+
+  .title {
+    font-size: clamp(2.6rem, 4vw, 3.4rem);
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 0.5rem;
+  }
+
+  .subtitle {
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    color: #334155;
+    margin: 0 0 1.5rem;
+    font-weight: 500;
+  }
+
+  .highlight {
+    background: #fde68a;
+    padding: 0 0.2rem;
+  }
+
+  .copy {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #6b7280;
+    max-width: 34rem;
+    margin-bottom: 2rem;
+  }
+
+  .stats {
+    display: flex;
+    gap: 3rem;
+    border-top: 1px dashed #d1d5db;
+    padding-top: 1.6rem;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    color: #0f172a;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #6b7280;
+    letter-spacing: 0.08em;
+  }
+
+  .photo-card {
+    width: 100%;
+    max-width: 22rem;
+    background: #fff;
+    padding: 0.7rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.16);
+  }
+
+  .photo-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-right {
+      order: -1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  /* EXPERTISE SECTION */
+  .expertise-section {
+    padding: 8rem 1.5rem;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .expertise-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    background: rgba(167, 243, 208, 0.2);
+    border-radius: 50%;
+    filter: blur(80px);
+    transform: translate(33%, -33%);
+    z-index: 0;
+  }
+
+  .expertise-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background: rgba(254, 240, 138, 0.2);
+    border-radius: 50%;
+    filter: blur(80px);
+    transform: translate(-33%, 33%);
+    z-index: 0;
+  }
+
+  .expertise-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .expertise-header {
+    max-width: 42rem;
+    margin: 0 auto 5rem;
+    text-align: center;
+  }
+
+  .expertise-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+  }
+
+  .expertise-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: #475569;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+    border-color: rgba(167, 243, 208, 0.5);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .service-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover .service-icon {
+    transform: scale(1.1);
+  }
+
+  .service-icon.mint {
+    background: #a7f3d0;
+    color: #065f46;
+  }
+
+  .service-icon.coral {
+    background: #fecaca;
+    color: #991b1b;
+  }
+
+  .service-icon.yellow {
+    background: #fef08a;
+    color: #854d0e;
+  }
+
+  .service-icon.blue {
+    background: #bfdbfe;
+    color: #1e40af;
+  }
+
+  .service-icon.lavender {
+    background: #e9d5ff;
+    color: #6b21a8;
+  }
+
+  .service-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+    transition: color 0.3s ease;
+  }
+
+  .service-card:hover .service-title {
+    color: #059669;
+  }
+
+  .service-description {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: #64748b;
+  }
+
+  @media (max-width: 768px) {
+    .expertise-section {
+      padding: 5rem 1.5rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

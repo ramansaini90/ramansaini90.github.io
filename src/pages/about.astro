@@ -424,15 +424,22 @@ import resumePdf from '../assets/Raman Saini Resume.pdf?url';
   @media (max-width: 900px) {
     .hero {
       grid-template-columns: 1fr;
+      padding: 2rem;
+      gap: 1.5rem;
     }
     .panel {
       grid-template-columns: 1fr;
+      padding: 2rem;
     }
     .pill-section {
       grid-template-columns: 1fr;
+      gap: 1.1rem;
     }
     .tools {
       grid-template-columns: 1fr;
+    }
+    .stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
@@ -442,7 +449,11 @@ import resumePdf from '../assets/Raman Saini Resume.pdf?url';
       gap: 2rem;
     }
     .hero {
-      padding: 1.75rem;
+      padding: 1.5rem;
+      gap: 1.25rem;
+    }
+    .panel {
+      padding: 1.5rem;
     }
     .actions {
       flex-direction: column;
@@ -453,6 +464,14 @@ import resumePdf from '../assets/Raman Saini Resume.pdf?url';
     }
     .stats {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+    .pill {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.65rem;
+    }
+    .timeline {
+      padding: 1.5rem;
     }
   }
 </style>

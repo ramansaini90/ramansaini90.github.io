@@ -1,63 +1,458 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+
+import headshot from '../assets/Headshot-raman.jpg';
+import resumePdf from '../assets/Raman Saini Resume.pdf?url';
 ---
 
-<Layout
-	title="What you need to know"
-	description="Quant Market Researcher"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`About | ${SITE_TITLE}`} description="Manager, Advanced Analytics | Turning research into clear, actionable strategies." />
+  </head>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+  <body>
+    <Header />
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Hi, I'm Raman 👋</h1>
+          <p class="lede">
+            I build research programs that turn complex survey data into clear decisions. From conjoint
+            and MaxDiff to segmentation and pricing studies, I help teams understand what customers want
+            and how to act on it.
+          </p>
+          <div class="actions">
+            <a class="button primary" href={resumePdf} target="_blank" rel="noopener">Download resume</a>
+            <a class="button primary" href="mailto:raman.saini90@gmail.com">Email me</a>
+          </div>
+          <div class="stats">
+            <div>
+              <div class="stat-number">10+ years</div>
+              <div class="stat-label">Insights & analytics</div>
+            </div>
+            <div>
+              <div class="stat-number">20+ conjoint</div>
+              <div class="stat-label">Product & pricing studies</div>
+            </div>
+            <div>
+              <div class="stat-number">50+ MaxDiff</div>
+              <div class="stat-label">Prioritization studies shipped</div>
+            </div>
+            <div>
+              <div class="stat-number">15+ segmentations</div>
+              <div class="stat-label">Targeting and positioning</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="portrait">
+            <Image src={headshot} alt="Raman Saini" />
+          </div>
+        </div>
+      </section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+      <section class="panel">
+        <div>
+          <p class="eyebrow">Summary</p>
+          <h2>Research lead who ships clear, actionable insight</h2>
+          <p>
+            I partner with product, marketing, and strategy teams to design studies, execute statistical
+            modeling, and package results so stakeholders can act fast. My toolkit spans MaxDiff, conjoint,
+            segmentation, and pricing research, with a focus on automation that shortens turnaround time.
+          </p>
+        </div>
+        <div class="list">
+          <div class="list-item">
+            <h3>Business development</h3>
+            <p>
+              Led RFP conversations and methodology recommendations that contributed to $8M in new business,
+              while designing onboarding programs that reduced ramp time by 25% and boosted team output.
+            </p>
+          </div>
+          <div class="list-item">
+            <h3>Research & analysis</h3>
+            <p>
+              Delivered 20+ conjoint and 50+ MaxDiff projects, plus segmentation for 20 clients to guide
+              targeting, innovation, messaging, and positioning.
+            </p>
+          </div>
+          <div class="list-item">
+            <h3>Methodology & delivery</h3>
+            <p>
+              Built automated workflows that cut project turnaround by 30% and upgraded simulators (choice
+              models, TURF, CSAT) to drive repeat client engagement.
+            </p>
+          </div>
+        </div>
+      </section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+      <section class="timeline">
+        <div class="timeline-header">
+          <p class="eyebrow">Experience</p>
+          <h2>Radius Insights — New York, NY</h2>
+          <p class="timeline-sub">Progressed from Statistical Analyst to Manager, Advanced Analytics (2017–present).</p>
+        </div>
+        <div class="timeline-grid">
+          <div class="card">
+            <p class="card-title">Manager, Advanced Analytics Group</p>
+            <p class="card-meta">Jul 2022 – Present</p>
+            <ul>
+              <li>Lead advanced research programs and present findings in stakeholder-friendly formats.</li>
+              <li>Guide teams on survey design, sample planning, and analysis to reduce turnaround times.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p class="card-title">Senior Statistical Analyst</p>
+            <p class="card-meta">Jan 2020 – Jun 2022</p>
+            <ul>
+              <li>Scaled automation across projects, streamlining delivery and quality checks.</li>
+              <li>Mentored analysts and improved onboarding programs to boost team output.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p class="card-title">Statistical Analyst</p>
+            <p class="card-meta">Aug 2017 – Dec 2019</p>
+            <ul>
+              <li>Ran conjoint, MaxDiff, and segmentation studies to inform product and marketing moves.</li>
+              <li>Presented research at Sawtooth Software Conference on augmented MaxDiff.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="pill-section">
+        <div>
+          <p class="eyebrow">Research methodologies</p>
+          <h2>Research programs I run</h2>
+          <div class="pill-row">
+            <span class="pill">Brand tracking</span>
+            <span class="pill">Pricing research</span>
+            <span class="pill">Product optimization</span>
+            <span class="pill">Claim testing</span>
+            <span class="pill">Segmentation</span>
+            <span class="pill">Key drivers</span>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Statistical techniques</p>
+          <h2>Analytical methods I deliver</h2>
+          <div class="pill-row">
+            <span class="pill">Conjoint</span>
+            <span class="pill">MaxDiff</span>
+            <span class="pill">Gabor Granger</span>
+            <span class="pill">Van-Westendorp</span>
+            <span class="pill">TURF</span>
+            <span class="pill">Kano</span>
+            <span class="pill">Regression</span>
+            <span class="pill">Clustering</span>
+            <span class="pill">Perceptual maps</span>
+            <span class="pill">SEM</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel tools">
+        <div>
+          <p class="eyebrow">Software</p>
+          <h2>Stack I work in</h2>
+          <div class="pill-row compact">
+            <span class="pill">Excel</span>
+            <span class="pill">SPSS</span>
+            <span class="pill">Sawtooth</span>
+            <span class="pill">SAS</span>
+            <span class="pill">R</span>
+            <span class="pill">Python</span>
+            <span class="pill">Latent Gold</span>
+            <span class="pill">Qualtrics</span>
+            <span class="pill">SQL</span>
+            <span class="pill">PowerPoint</span>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Education</p>
+          <h2>Masters in Marketing Research</h2>
+          <p class="muted">University of Georgia, Athens, GA · Jun 2016 – May 2017</p>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  :global(body) {
+    background: #fefbf6;
+  }
+
+  .page {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #fff7ed 0%, #e0f2fe 100%);
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  .hero-text h1 {
+    margin: 0.5rem 0 0.8rem;
+    font-size: clamp(2.4rem, 4vw, 3rem);
+    color: #0f172a;
+  }
+
+  .lede {
+    margin: 0;
+    color: #475569;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.4rem 0 1.6rem;
+  }
+
+  .button {
+    border-radius: 999px;
+    padding: 0.65rem 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border: 1px solid #fbbf24;
+    background: linear-gradient(90deg, #fbbf24, #f97316);
+    color: #0f172a;
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.18);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .stat-label {
+    color: #475569;
+    font-size: 0.95rem;
+  }
+
+  .hero-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portrait {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15);
+  }
+
+  .portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .panel {
+    background: white;
+    border-radius: 20px;
+    padding: 2.25rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    color: #f97316;
+    margin: 0 0 0.3rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0 0 0.6rem;
+    color: #0f172a;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+  }
+
+  p {
+    color: #475569;
+    line-height: 1.7;
+  }
+
+  .list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .list-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.25rem 1.35rem;
+  }
+
+  .list-item h3 {
+    margin: 0 0 0.35rem;
+    color: #0f172a;
+    font-size: 1.05rem;
+  }
+
+  .timeline {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .timeline-header h2 {
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-sub {
+    margin: 0;
+    color: #64748b;
+  }
+
+  .timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .card {
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.25rem 1.35rem;
+    background: #f8fafc;
+  }
+
+  .card-title {
+    margin: 0 0 0.25rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .card-meta {
+    margin: 0 0 0.5rem;
+    color: #64748b;
+    font-size: 0.95rem;
+  }
+
+  .card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: #475569;
+    display: grid;
+    gap: 0.35rem;
+    line-height: 1.5;
+  }
+
+  .pill-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .pill {
+    background: #f4f6fb;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    color: #0f172a;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.07);
+  }
+
+  .tools {
+    grid-template-columns: 1.4fr 0.9fr;
+  }
+
+  .muted {
+    color: #475569;
+    margin: 0.2rem 0 0;
+  }
+
+  .compact .pill {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+    .panel {
+      grid-template-columns: 1fr;
+    }
+    .pill-section {
+      grid-template-columns: 1fr;
+    }
+    .tools {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page {
+      padding: 1.75rem 1rem 3rem;
+      gap: 2rem;
+    }
+    .hero {
+      padding: 1.75rem;
+    }
+    .actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .actions .button {
+      text-align: center;
+    }
+    .stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

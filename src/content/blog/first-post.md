@@ -37,7 +37,7 @@ Once you start:
 - Friction drops
 - Focus increases
 - Resistance fades
-More often than not, five minutes turns into fifteen… then thirty… then completion.
+More often than not, 5 minutes turns into 15… then 30… then completion.
 
 ### It Reduces the Fear of “Forever”
 We procrastinate because tasks feel endless:

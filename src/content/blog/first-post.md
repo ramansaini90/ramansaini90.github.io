@@ -7,5 +7,5 @@ heroImage: '../../assets/blog-placeholder-3.jpg'
 
 # The 5 minute rule
 The 5-minute rule is simple. It is the easiest way of getting unstuck and break procrastination. 
->[quote!]
+>[!quote]
 > You have to perfect the art of showing up

@@ -26,7 +26,7 @@ They feel hard before you start.
 Your brain exaggerates:
 - The effort required
 - The time commitment
-- The emotional cost
+- The emotional cost  
 Five minutes feels safe. Non-threatening. Manageable.
 ### It Bypasses Motivation
 The 5-Minute Rule doesn’t rely on motivation.
@@ -34,12 +34,12 @@ It relies on momentum.
 Once you start:
 - Friction drops
 - Focus increases
-- Resistance fades
+- Resistance fades  
 More often than not, 5 minutes turns into 15… then 30… then completion.
 ### It Reduces the Fear of “Forever”
 We procrastinate because tasks feel endless:
 - “This workout will take an hour.”
 - “This blog post will take all evening.”
-- “This project will never end.”
-Five minutes reframes the task as temporary.
+- “This project will never end.”  
+Five minutes reframes the task as temporary.  
 Your brain relaxes — and lets you begin.

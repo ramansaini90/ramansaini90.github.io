@@ -19,7 +19,6 @@ Not “until it’s done.”
 Just five minutes.
 
 If after five minutes you want to stop, you’re allowed to stop, guilt free.
-
 The magic isn’t in the five minutes themselves.
 It’s in what happens after you start.
 
@@ -29,25 +28,28 @@ Most tasks don’t feel hard once you’re doing them.
 They feel hard before you start.
 
 Your brain exaggerates:
-The effort required
-The time commitment
-The emotional cost
+- The effort required
+- The time commitment
+- The emotional cost
 
 Five minutes feels safe. Non-threatening. Manageable.
 ### It Bypasses Motivation
 The 5-Minute Rule doesn’t rely on motivation.
 It relies on momentum.
 Once you start:
-Friction drops
-Focus increases
-Resistance fades
+- Friction drops
+- Focus increases
+- Resistance fades
 More often than not, five minutes turns into fifteen… then thirty… then completion.
+
+![[Hes-flying.png]]
 
 ### It Reduces the Fear of “Forever”
 We procrastinate because tasks feel endless:
-“This workout will take an hour.”
-“This blog post will take all evening.”
-“This project will never end.”
+- “This workout will take an hour.”
+- “This blog post will take all evening.”
+- “This project will never end.”
+
 Five minutes reframes the task as temporary.
 Your brain relaxes — and lets you begin.
 

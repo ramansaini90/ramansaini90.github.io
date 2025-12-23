@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cb1a0c4f40b5c187",
+        "id": "a2e6a96edf1513a4",
         "type": "tabs",
         "children": [
           {
-            "id": "461b4a0ac64cb73c",
+            "id": "5e3197d1041d07b7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/blog/first-post.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "first-post"
+              "title": "New tab"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/first-post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for first-post"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/first-post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from first-post"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/first-post.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of first-post"
+              "title": "Outline"
             }
           }
         ]
@@ -183,11 +176,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "461b4a0ac64cb73c",
+  "active": "5e3197d1041d07b7",
   "lastOpenFiles": [
+    "content/blog/first-post.md",
     "content/blog/markdown-style-guide.md",
     "content/blog/third-post.md",
-    "content/blog/second-post.md",
-    "content/blog/first-post.md"
+    "content/blog/second-post.md"
   ]
 }

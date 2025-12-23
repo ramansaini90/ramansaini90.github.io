@@ -18,6 +18,7 @@ Just five minutes.
 If after five minutes you want to stop, you’re allowed to stop, guilt free.  
 The magic isn’t in the five minutes themselves.  
 It’s in what happens after you start.  
+
 ## Why the 5-Minute Rule Works
 ### Starting Is the Hardest Part
 Most tasks don’t feel hard once you’re doing them.

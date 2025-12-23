@@ -42,7 +42,7 @@ Once you start:
 - Resistance fades
 More often than not, five minutes turns into fifteen… then thirty… then completion.
 
-![[Hes-flying.png]]
+![[assets/Hes-flying.png]]
 
 ### It Reduces the Fear of “Forever”
 We procrastinate because tasks feel endless:

@@ -4,9 +4,6 @@ description: The golden rule of getting sh*t done!
 pubDate: Dec 22 2025
 heroImage: ../../assets/Blog-post-1.png
 ---
-
-# The 5 minute rule
-
 If you’ve ever procrastinated on something important, writing, working out, cleaning, learning a new skill and want to find the one stupid simple hack to make doing all these things painless, I've got a hack for you.
 
 One of the simplest productivity ideas I’ve come across is the 5 minute rule. It’s deceptively simple, but incredibly powerful when applied consistently.
@@ -41,8 +38,6 @@ Once you start:
 - Focus increases
 - Resistance fades
 More often than not, five minutes turns into fifteen… then thirty… then completion.
-
-![hes flying](../../assets/Hes-flying.png)
 
 ### It Reduces the Fear of “Forever”
 We procrastinate because tasks feel endless:

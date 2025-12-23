@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/markdown-style-guide.md",
+                "file": "content/blog/first-post.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "markdown-style-guide"
+              "title": "first-post"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/markdown-style-guide.md",
+                "file": "content/blog/first-post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for markdown-style-guide"
+              "title": "Backlinks for first-post"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/markdown-style-guide.md",
+                "file": "content/blog/first-post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from markdown-style-guide"
+              "title": "Outgoing links from first-post"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/markdown-style-guide.md",
+                "file": "content/blog/first-post.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of markdown-style-guide"
+              "title": "Outline of first-post"
             }
           }
         ]
@@ -185,9 +185,9 @@
   },
   "active": "461b4a0ac64cb73c",
   "lastOpenFiles": [
+    "content/blog/markdown-style-guide.md",
     "content/blog/third-post.md",
     "content/blog/second-post.md",
-    "content/blog/markdown-style-guide.md",
     "content/blog/first-post.md"
   ]
 }

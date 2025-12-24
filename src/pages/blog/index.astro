@@ -20,6 +20,14 @@ const posts = (await getCollection('blog')).sort(
 			main {
 				width: 960px;
 			}
+			.results-meta {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				margin-bottom: 1rem;
+				color: rgb(var(--gray));
+				font-weight: 600;
+			}
 			ul {
 				display: flex;
 				flex-wrap: wrap;
@@ -90,10 +98,15 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main>
 			<section>
+				<div class="results-meta">
+					<span data-result-count>{posts.length} posts</span>
+				</div>
 				<ul>
 					{
 						posts.map((post) => (
-							<li>
+							<li
+								data-post
+							>
 								<a href={`/blog/${post.id}/`}>
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" />

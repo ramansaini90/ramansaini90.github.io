@@ -188,7 +188,7 @@ import resumePdf from '../assets/Raman Saini Resume.pdf?url';
 
 <style>
   :global(body) {
-    background: #fefbf6;
+    background: #f4f7fb;
   }
 
   .page {
@@ -202,7 +202,12 @@ import resumePdf from '../assets/Raman Saini Resume.pdf?url';
   }
 
   .hero {
-    background: linear-gradient(135deg, #fff7ed 0%, #e0f2fe 100%);
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255, 237, 213, 0.65), transparent 45%),
+      radial-gradient(circle at 80% 10%, rgba(219, 234, 254, 0.7), transparent 40%),
+      radial-gradient(circle at 15% 80%, rgba(209, 250, 229, 0.55), transparent 40%),
+      radial-gradient(circle at 70% 75%, rgba(254, 249, 195, 0.6), transparent 45%),
+      linear-gradient(135deg, #eaf2ff 0%, #f8fbff 60%, #fdf5ea 100%);
     border-radius: 22px;
     padding: 2.25rem;
     display: grid;
@@ -237,16 +242,16 @@ import resumePdf from '../assets/Raman Saini Resume.pdf?url';
     font-weight: 600;
     text-decoration: none;
     font-size: 0.95rem;
-    border: 1px solid #fbbf24;
-    background: linear-gradient(90deg, #fbbf24, #f97316);
+    border: 1px solid #bfdbfe;
+    background: linear-gradient(90deg, #bfdbfe, #93c5fd);
     color: #0f172a;
-    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.18);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.18);
     transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
   }
 
   .button:hover {
     transform: translateY(-1px);
-    filter: brightness(1.03);
+    filter: brightness(1.04);
   }
 
   .stats {
@@ -298,8 +303,8 @@ import resumePdf from '../assets/Raman Saini Resume.pdf?url';
   .eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-size: 0.75rem;
-    color: #f97316;
+    font-size: 1rem;
+    color: #2563eb;
     margin: 0 0 0.3rem;
     font-weight: 700;
   }

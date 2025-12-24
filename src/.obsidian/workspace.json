@@ -11,10 +11,14 @@
             "id": "cee5e0b73698f441",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/blog/third-post.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "third-post"
             }
           }
         ]
@@ -179,9 +183,9 @@
   "active": "cee5e0b73698f441",
   "lastOpenFiles": [
     "content/blog/first-post.md",
-    "content/blog/markdown-style-guide.md",
     "content/blog/third-post.md",
     "content/blog/second-post.md",
+    "content/blog/markdown-style-guide.md",
     "assets/Blog-post-1.png"
   ]
 }

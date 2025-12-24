@@ -3,6 +3,10 @@ title: The 5 minute rule
 description: The golden rule of getting sh*t done!
 pubDate: Dec 22 2025
 heroImage: ../../assets/Blog-post-1.png
+tags:
+  - productivity
+  - habits
+  - motivation
 ---
 If you’ve ever procrastinated on something important, writing, working out, cleaning, learning a new skill and want to find the one stupid simple hack to make doing all these things painless, I've got a hack for you.
 

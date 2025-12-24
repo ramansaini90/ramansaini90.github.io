@@ -148,48 +148,51 @@ import HeaderLink from './HeaderLink.astro';
 
 <script>
 	if (typeof window !== 'undefined') {
-		const icon = document.querySelector('.brand-icon');
-		const eyes = Array.from(document.querySelectorAll('.icon-eye'));
+		window.addEventListener('DOMContentLoaded', () => {
+			const icon = document.querySelector('.brand-icon');
+			const eyes = Array.from(document.querySelectorAll('.icon-eye'));
 
-		let blinkScale = 1;
-		let offset = { x: 0, y: 0 };
-		let blinkTimer;
+			if (!icon || eyes.length === 0) return;
 
-		const clamp = (v) => Math.max(Math.min(v, 1), -1);
+			let blinkScale = 1;
+			let offset = { x: 0, y: 0 };
+			let blinkTimer;
 
-		function updateEyes() {
-			eyes.forEach((eye) => {
-				eye.style.transform = `translate(${offset.x}px, ${offset.y}px) scaleY(${blinkScale})`;
-			});
-		}
+			const clamp = (v) => Math.max(Math.min(v, 1), -1);
 
-		function handleMouseMove(event) {
-			if (!icon) return;
-			const rect = icon.getBoundingClientRect();
-			const cx = rect.left + rect.width / 2;
-			const cy = rect.top + rect.height / 2;
-			const dx = clamp((event.clientX - cx) / (rect.width / 2));
-			const dy = clamp((event.clientY - cy) / (rect.height / 2));
-			offset = { x: dx * 6, y: dy * 6 };
-			updateEyes();
-		}
+			function updateEyes() {
+				eyes.forEach((eye) => {
+					eye.style.transform = `translate(${offset.x}px, ${offset.y}px) scaleY(${blinkScale})`;
+				});
+			}
 
-		function blink() {
-			blinkScale = 0.1;
-			updateEyes();
-			setTimeout(() => {
-				blinkScale = 1;
+			function handleMouseMove(event) {
+				const rect = icon.getBoundingClientRect();
+				const cx = rect.left + rect.width / 2;
+				const cy = rect.top + rect.height / 2;
+				const dx = clamp((event.clientX - cx) / (rect.width / 2));
+				const dy = clamp((event.clientY - cy) / (rect.height / 2));
+				offset = { x: dx * 7, y: dy * 7 };
 				updateEyes();
-			}, 160);
-			blinkTimer = setTimeout(blink, 1800 + Math.random() * 2500);
-		}
+			}
 
-		window.addEventListener('mousemove', handleMouseMove);
-		blink();
+			function blink() {
+				blinkScale = 0.1;
+				updateEyes();
+				setTimeout(() => {
+					blinkScale = 1;
+					updateEyes();
+				}, 140);
+				blinkTimer = setTimeout(blink, 1400 + Math.random() * 1800);
+			}
 
-		window.addEventListener('astro:before-swap', () => {
-			window.removeEventListener('mousemove', handleMouseMove);
-			if (blinkTimer) clearTimeout(blinkTimer);
+			window.addEventListener('mousemove', handleMouseMove);
+			blink();
+
+			window.addEventListener('astro:before-swap', () => {
+				window.removeEventListener('mousemove', handleMouseMove);
+				if (blinkTimer) clearTimeout(blinkTimer);
+			});
 		});
 	}
 </script>

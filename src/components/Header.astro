@@ -5,7 +5,24 @@ import HeaderLink from './HeaderLink.astro';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2 class="brand">
+			<a href="/" class="brand-link">
+				<svg
+					class="brand-icon"
+					viewBox="0 0 180 180"
+					role="img"
+					aria-label="Batcat logo"
+				>
+					<circle cx="90" cy="90" r="90" class="icon-bg" />
+					<path d="M60 34L60 34L127 180H17Z" class="icon-ear" />
+					<path d="M120 34L120 34L53 180H163Z" class="icon-ear" />
+					<circle r="42" cx="90" cy="110" class="icon-face" />
+					<ellipse rx="7" cx="78" cy="112" ry="14" class="icon-eye left" />
+					<ellipse rx="7" cx="104" cy="112" ry="14" class="icon-eye right" />
+				</svg>
+				<span>{SITE_TITLE}</span>
+			</a>
+		</h2>
 
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
@@ -55,6 +72,41 @@ import HeaderLink from './HeaderLink.astro';
 		text-decoration: none;
 	}
 
+	.brand {
+		display: flex;
+		align-items: center;
+	}
+
+	.brand-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6em;
+		color: inherit;
+	}
+
+	.brand-icon {
+		width: 30px;
+		height: 30px;
+	}
+
+	.icon-bg {
+		fill: rgb(var(--black));
+	}
+
+	.icon-ear,
+	.icon-face {
+		fill: white;
+	}
+
+	.icon-eye {
+		fill: rgb(var(--black));
+		transform-origin: center;
+		transform-box: fill-box;
+	}
+
+	.icon-eye.right {
+	}
+
 	nav {
 		display: flex;
 		align-items: center;
@@ -93,3 +145,51 @@ import HeaderLink from './HeaderLink.astro';
 		}
 	}
 </style>
+
+<script>
+	if (typeof window !== 'undefined') {
+		const icon = document.querySelector('.brand-icon');
+		const eyes = Array.from(document.querySelectorAll('.icon-eye'));
+
+		let blinkScale = 1;
+		let offset = { x: 0, y: 0 };
+		let blinkTimer;
+
+		const clamp = (v) => Math.max(Math.min(v, 1), -1);
+
+		function updateEyes() {
+			eyes.forEach((eye) => {
+				eye.style.transform = `translate(${offset.x}px, ${offset.y}px) scaleY(${blinkScale})`;
+			});
+		}
+
+		function handleMouseMove(event) {
+			if (!icon) return;
+			const rect = icon.getBoundingClientRect();
+			const cx = rect.left + rect.width / 2;
+			const cy = rect.top + rect.height / 2;
+			const dx = clamp((event.clientX - cx) / (rect.width / 2));
+			const dy = clamp((event.clientY - cy) / (rect.height / 2));
+			offset = { x: dx * 6, y: dy * 6 };
+			updateEyes();
+		}
+
+		function blink() {
+			blinkScale = 0.1;
+			updateEyes();
+			setTimeout(() => {
+				blinkScale = 1;
+				updateEyes();
+			}, 160);
+			blinkTimer = setTimeout(blink, 1800 + Math.random() * 2500);
+		}
+
+		window.addEventListener('mousemove', handleMouseMove);
+		blink();
+
+		window.addEventListener('astro:before-swap', () => {
+			window.removeEventListener('mousemove', handleMouseMove);
+			if (blinkTimer) clearTimeout(blinkTimer);
+		});
+	}
+</script>

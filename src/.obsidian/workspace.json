@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c9071d185ff0ee3b",
+        "id": "0d33ea7f528aabca",
         "type": "tabs",
         "children": [
           {
-            "id": "cee5e0b73698f441",
+            "id": "cc69ca8f22fbe55a",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -178,7 +176,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "cee5e0b73698f441",
+  "active": "cc69ca8f22fbe55a",
   "lastOpenFiles": [
     "content/blog/first-post.md",
     "content/blog/third-post.md",

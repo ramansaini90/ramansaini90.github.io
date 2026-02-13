@@ -7,6 +7,7 @@
 :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
+	--site-text-green: #15803d;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
@@ -39,9 +40,12 @@ body {
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: var(--site-text-green);
 	font-size: 20px;
 	line-height: 1.7;
+}
+body * {
+	color: var(--site-text-green) !important;
 }
 main {
 	width: 720px;
